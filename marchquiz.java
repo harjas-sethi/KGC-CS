@@ -1,17 +1,18 @@
 import java.util.Arrays;
 import java.util.Scanner;
+import java.lang.Math;
 
 public class marchquiz
 {
 	public static void main(String[] args) {
-        int [] all = {8, 3, 55, 9, 10, 3, 66, 31, 3};
+        int [] all = {8, 3, -55, 9, -10, -23, 66, 31, -3};
 
         //Part A
         int [] odd = new int[10];
         int oddLength = 0;
 
         for (int i = 0; i < all.length;) {
-            if (all[i] % 2 == 1) { 
+            if (Math.abs(all[i]) % 2 == 1) { 
                 odd[oddLength] = all[i]; 
                 oddLength++; 
             }
